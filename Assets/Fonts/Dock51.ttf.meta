@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: dcab68c1f25168a4a8262c5c42ae13c3
+timeCreated: 1507945401
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dock 51
+  fontNames:
+  - Dock 51
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
