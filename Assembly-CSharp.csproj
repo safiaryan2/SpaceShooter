@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\BackgroundController.cs" />
+     <Compile Include="Assets\_Scripts\EnemyNo1Controller.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\PlayerFire.cs" />
  <Reference Include="UnityEngine.UI">

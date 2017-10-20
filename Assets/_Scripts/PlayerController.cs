@@ -26,11 +26,16 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 
-		//**************************POSITION + BOUNDARY Setting**************************
-		//*******************************************************************************
 
+	//**************************BOUNDARY + POSITION Setting**************************
+	//*******************************************************************************
+	//
+	// 1. Set boundary limiting Player to only lft to right movement. 
+	// 2. Set position of Player according to mouse movement.
+
+			// 1. BOUNDARY
 			//Position of x.
-		    //Mouse.
+		    //(Mouse)
 			float mouseX = Camera.main.ScreenToWorldPoint (Input.mousePosition).x;
 
 			Vector3 mousePosition = new Vector3(mouseX, -200f, 0f);
@@ -43,25 +48,26 @@ public class PlayerController : MonoBehaviour {
 				mousePosition.x = this.LeftBoundary;
 			}
 
-			// Player position set to mouse position per frame:
-			transform.position = mousePosition; 
+				// 2. POISITION
+				// Player position set to mouse position per frame:
+				transform.position = mousePosition; 
 
 
 
 
 		//****************************FIRE***************************
-		//
-		//Fire on User keybutton press (space bar)
-		//
 		//***********************************************************
+		//
+		//Fire on User keybutton press (space bar).
+		//
 
-		if (Input.GetKeyDown ("space")) {
+			if (Input.GetKeyDown ("space")) {
 
-			//Create fire prefab
-			GameObject fire = (GameObject)Instantiate(firePrefab);
-			fire.transform.position = firePosition1.transform.position;
+				//Create fire prefab
+				GameObject fire = (GameObject)Instantiate(firePrefab);
+				fire.transform.position = firePosition1.transform.position;
 
-		}
+			}
 
 
 	}
