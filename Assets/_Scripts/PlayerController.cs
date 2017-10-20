@@ -9,8 +9,9 @@ public class PlayerController : MonoBehaviour {
 	public float LeftBoundary;
 	public float RightBoundary;
 
-	//fire prefab + fire position 1
+	//fire prefab. This prefab is attached to the laser pic in /Sprites2 folder.
 	public GameObject firePrefab;
+	// fire prefab's spawn point is called fire position 1
 	public GameObject firePosition1;
 
 

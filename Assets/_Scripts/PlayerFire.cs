@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerFire : MonoBehaviour {
 
 	//speed of fire
-	float speed;
+	float speedOfFire;
 
 	// Use this for initialization
 	void Start () {
 
-		speed = 1f;
+		speedOfFire = 1f;
 		
 	}
 	
@@ -21,7 +21,7 @@ public class PlayerFire : MonoBehaviour {
 		Vector2 currentPosition = transform.position;
 
 		//Compute fire's new position
-		currentPosition = new Vector2 (currentPosition.x, currentPosition.y + speed + Time.deltaTime);
+		currentPosition = new Vector2 (currentPosition.x, currentPosition.y + speedOfFire + Time.deltaTime);
 
 		//Update fire's position
 		transform.position = currentPosition;
