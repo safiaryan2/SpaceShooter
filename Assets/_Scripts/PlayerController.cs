@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour {
 	public float LeftBoundary;
 	public float RightBoundary;
 
-	//fire prefab. This prefab is attached to the laser pic in /Sprites2 folder.
+	//The Fire prefab. This prefab is attached to the laser pic in /Sprites folder.
 	public GameObject firePrefab;
-	// fire prefab's spawn point is called fire position 1
+	//Fire prefab's spawn point is called fire position 1
 	public GameObject firePosition1;
 
 
@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 
-		// POSITION + BOUNDARY setting...................................................
+		//**************************POSITION + BOUNDARY Setting**************************
+		//*******************************************************************************
 
 			//Position of x.
 		    //Mouse.
@@ -46,11 +47,17 @@ public class PlayerController : MonoBehaviour {
 			transform.position = mousePosition; 
 
 
-		//Fire on User keybutton press (space bar).....................................
+
+
+		//****************************FIRE***************************
+		//
+		//Fire on User keybutton press (space bar)
+		//
+		//***********************************************************
 
 		if (Input.GetKeyDown ("space")) {
 
-			//Create fire
+			//Create fire prefab
 			GameObject fire = (GameObject)Instantiate(firePrefab);
 			fire.transform.position = firePosition1.transform.position;
 
