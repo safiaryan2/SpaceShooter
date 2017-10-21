@@ -13,7 +13,8 @@ public class EnemyNo1Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		EnemeyNo1Spawner();
+		SpawnTimer ();
+
 	}
 	
 	// Update is called once per frame
@@ -36,6 +37,17 @@ public class EnemyNo1Spawner : MonoBehaviour {
 		GameObject enemyNo1 = (GameObject)Instantiate(enemyNo1Prefab);
 		enemyNo1.transform.position = new Vector2 (Random.Range(min.x,max.x),max.y);
 			
+
+	}
+
+	void SpawnTimer()
+	{
+
+		// Invoke Repeating- Calls a method every x number of seconds (float).
+		// First 5 seconds for first, and then 2nd 5 seconds for repeating.
+		// https://docs.unity3d.com/ScriptReference/MonoBehaviour.InvokeRepeating.html
+		InvokeRepeating("EnemeyNo1Spawner", 5f, 5f);
+
 	}
 		
 }
