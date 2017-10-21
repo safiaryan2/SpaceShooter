@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 
 	//The Fire prefab. This prefab is attached to the laser pic in /Sprites folder.
 	public GameObject firePrefab;
-	//Fire prefab's spawn point is called fire position 1
+	//Fire prefab's spawn point is called fire position 1.
 	public GameObject firePosition1;
 
 

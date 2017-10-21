@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// THIS SCRIPT IS TIED TO FIRE PREFABS
+
 public class PlayerFire : MonoBehaviour {
 
 	//speed of fire
@@ -17,16 +19,18 @@ public class PlayerFire : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//Get current position of fire
-		Vector2 currentPosition = transform.position;
+		// 1. Send the Fire upwards:
 
-		//Compute fire's new position
-		currentPosition = new Vector2 (currentPosition.x, currentPosition.y + speedOfFire + Time.deltaTime);
+				//Get current position of fire
+				Vector2 currentPosition = transform.position;
 
-		//Update fire's position
-		transform.position = currentPosition;
+				//Compute fire's new position
+				currentPosition = new Vector2 (currentPosition.x, currentPosition.y + speedOfFire + Time.deltaTime);
 
-		//Remove fire from memory if it goes out of screen on top.....
+				//Update fire's position
+				transform.position = currentPosition;
+
+		// 2. Remove Fire from memory if it goes out of screen on top.....
 
 			//Top of screen
 			Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2(1,1));
