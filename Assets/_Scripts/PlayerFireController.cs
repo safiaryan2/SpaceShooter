@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// THIS SCRIPT IS TIED TO FIRE PREFAB
+// THIS SCRIPT IS TIED TO PLAYERFIRE PREFAB
 
 public class PlayerFireController : MonoBehaviour {
 
@@ -21,6 +21,10 @@ public class PlayerFireController : MonoBehaviour {
 
 		// 1. Send the Fire upwards:
 
+				//rotate the sprite
+				//http://answers.unity3d.com/questions/580001/trying-to-rotate-a-2d-sprite.html
+				transform.Rotate (Vector3.forward);
+				
 				//Get current position of fire
 				Vector2 currentPosition = transform.position;
 
@@ -30,7 +34,7 @@ public class PlayerFireController : MonoBehaviour {
 				//Update fire's position
 				transform.position = currentPosition;
 
-		// 2. Remove Fire from memory if it goes out of screen on top.....
+		// 2. Remove Fire from memory if it goes out of screen on top:
 
 			//Top of screen
 			Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2(1,1));

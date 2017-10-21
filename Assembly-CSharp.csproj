@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\BackgroundController.cs" />
+     <Compile Include="Assets\_Scripts\EnemyFireSpot.cs" />
      <Compile Include="Assets\_Scripts\EnemyNo1Controller.cs" />
+     <Compile Include="Assets\_Scripts\EnemyNo1FireController.cs" />
      <Compile Include="Assets\_Scripts\EnemyNo1Spawner.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\PlayerFireController.cs" />

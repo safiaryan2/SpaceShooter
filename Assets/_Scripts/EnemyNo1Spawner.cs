@@ -43,10 +43,10 @@ public class EnemyNo1Spawner : MonoBehaviour {
 	void SpawnTimer()
 	{
 
-		// Invoke Repeating- Calls a method every x number of seconds (float).
-		// First 5 seconds for first, and then 2nd 5 seconds for repeating.
+		// Invoke Repeating - Calls a method every x number of seconds (float).
+		// First 4 seconds for first call, and then 2nd 4 seconds for repeating calls.
 		// https://docs.unity3d.com/ScriptReference/MonoBehaviour.InvokeRepeating.html
-		InvokeRepeating("EnemeyNo1Spawner", 5f, 5f);
+		InvokeRepeating("EnemeyNo1Spawner", 4f, 4f);
 
 	}
 		
