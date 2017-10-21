@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// THIS SCRIPT IS TIED TO ENEMYNO1 GAME OBJECT
+// THIS SCRIPT IS TIED TO ENEMYNO1 PREFAB
 
 public class EnemyNo1Controller : MonoBehaviour {
 

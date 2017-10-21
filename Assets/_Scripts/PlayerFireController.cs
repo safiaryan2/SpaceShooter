@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// THIS SCRIPT IS TIED TO FIRE PREFABS
+// THIS SCRIPT IS TIED TO FIRE PREFAB
 
-public class PlayerFire : MonoBehaviour {
+public class PlayerFireController : MonoBehaviour {
 
 	//speed of fire
 	float speedOfFire;
