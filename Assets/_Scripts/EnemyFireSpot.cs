@@ -28,7 +28,7 @@ public class EnemyFireSpot : MonoBehaviour {
 
 		//Get Player game object
 		GameObject playerReference = GameObject.Find("Player");
-		Debug.Log (playerReference);
+		Debug.Log ("Reference of Game Object: " + playerReference);
 
 		if (playerReference != null) {
 

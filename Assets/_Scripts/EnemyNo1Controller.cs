@@ -15,6 +15,30 @@ public class EnemyNo1Controller : MonoBehaviour {
 		speedOfEnemy = 2f;
 		
 	}
+
+	// --- Collision Checking ---
+	// Documentation:
+	// https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html
+	public void OnCollisionEnter2D(Collision2D collision) {
+
+		Debug.Log ("OnCollisionEnter2D() called.");
+		//Debug.Log ("Collision check: " + collision.gameObject.tag == "PlayerFire");
+
+		if (collision.gameObject.tag == "PlayerFire" ||
+			collision.gameObject.tag == "PlayerFire(Clone)" ||
+			collision.gameObject.name == "PlayerFire(Clone)" || 
+		    collision.gameObject.name == "PlayerFire (clone)" || 
+		    collision.gameObject.name == "PlayerFire" ||
+			collision.gameObject == GameObject.FindGameObjectWithTag("PlayerFire") || 
+			collision.gameObject == GameObject.FindGameObjectWithTag("PlayerFire(Clone)"))
+		
+		{
+			Debug.Log ("ROGER! Collision EnemyNo1 with PlayerFire");
+			//Debug.Log ("Collision check: " + collision.gameObject.tag == "PlayerFire");
+			Destroy (gameObject);
+		}
+
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,6 +62,12 @@ public class EnemyNo1Controller : MonoBehaviour {
 				if (transform.position.y < min.y) {
 						Destroy (gameObject);
 					}
+			
+
+
+
 
 	}
+
+
 }
