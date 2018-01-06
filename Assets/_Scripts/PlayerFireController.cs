@@ -12,7 +12,7 @@ public class PlayerFireController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		speedOfFire = 1f;
+		speedOfFire = 2f;
 		
 	}
 	
@@ -23,7 +23,7 @@ public class PlayerFireController : MonoBehaviour {
 
 				//rotate the sprite
 				//http://answers.unity3d.com/questions/580001/trying-to-rotate-a-2d-sprite.html
-				transform.Rotate (Vector3.forward);
+					//transform.Rotate (Vector3.forward);
 				
 				//Get current position of fire
 				Vector2 currentPosition = transform.position;
