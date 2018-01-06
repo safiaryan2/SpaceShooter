@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerFire
   - EnemyNo1
+  - EnemyNo1Fire
+  - Score
   layers:
   - Default
   - TransparentFX

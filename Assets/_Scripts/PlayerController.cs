@@ -21,7 +21,34 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		
 	}
-	
+
+	// --- Collision Checking ---
+	// Documentation:
+	// https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html
+	public void OnCollisionEnter2D(Collision2D collision) {
+
+		Debug.Log ("PlayerController.cs: OnCollisionEnter2D() called.");
+		//Debug.Log ("Collision check: " + collision.gameObject.tag == "EnemyNo1Fire");
+
+		if (collision.gameObject.tag == "EnemyNo1Fire" ||
+			collision.gameObject.tag == "EnemyNo1Fire(Clone)" ||
+			collision.gameObject.name == "EnemyNo1FireClone)" || 
+			collision.gameObject.name == "EnemyNo1Fire (clone)" || 
+			collision.gameObject.name == "EnemyNo1Fire" ||
+			collision.gameObject == GameObject.FindGameObjectWithTag("EnemyNo1Fire") || 
+			collision.gameObject == GameObject.FindGameObjectWithTag("EnemyNo1Fire(Clone)"))
+
+		{
+			Debug.Log ("ROGER! Collision EnemyNo1 with EnemyNo1Fire");
+			//Debug.Log ("Collision check: " + collision.gameObject.tag == "EnemyNo1Fire");
+			Destroy (gameObject);
+
+			//End the game
+			//TODO: Display restart game screen here
+		}
+
+	}
+
 	// Update is called once per frame
 	void Update () {
 

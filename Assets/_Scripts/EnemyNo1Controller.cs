@@ -21,7 +21,7 @@ public class EnemyNo1Controller : MonoBehaviour {
 	// https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html
 	public void OnCollisionEnter2D(Collision2D collision) {
 
-		Debug.Log ("OnCollisionEnter2D() called.");
+		Debug.Log ("EnemyNo1Controller.cs: OnCollisionEnter2D() called.");
 		//Debug.Log ("Collision check: " + collision.gameObject.tag == "PlayerFire");
 
 		if (collision.gameObject.tag == "PlayerFire" ||
